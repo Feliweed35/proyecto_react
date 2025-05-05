@@ -1,38 +1,75 @@
+/* Estilos generales de la aplicación */
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif; /* Mejora la legibilidad con una fuente profesional */
 }
 
+/* Estilo del logo de la aplicación */
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 40vmin; /* Ajusta el tamaño del logo */
+  pointer-events: none; /* Previene interacción no deseada con el logo */
+  transition: transform 0.3s ease-in-out; /* Transición suave al hacer hover */
 }
 
+/* Animación del logo (si el usuario no ha desactivado la animación) */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear; /* Animación de rotación continua */
   }
 }
 
+/* Estilos del encabezado */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #282c34; /* Fondo oscuro para contraste */
+  color: #fff; /* Color de texto blanco */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh; /* Asegura que el encabezado cubra toda la altura de la ventana */
+  font-size: calc(10px + 2vmin); /* Tamaño de fuente responsivo */
+  padding: 20px; /* Añadir espacio en el encabezado */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del elemento */
 }
 
-.App-link {
+.App-title {
+  font-size: 2.5rem;
+  font-weight: bold;
   color: #61dafb;
+  margin-bottom: 20px;
 }
 
+.App-description {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.App-instructions {
+  font-size: 1rem;
+  color: #bbb;
+  margin-top: 10px;
+}
+
+/* Estilos de los enlaces */
+.App-link {
+  color: #61dafb; /* Color azul claro para el enlace */
+  text-decoration: none; /* Elimina el subrayado por defecto */
+  font-weight: bold; /* Hace que el texto del enlace sea más destacado */
+  transition: color 0.3s ease; /* Transición suave de color */
+}
+
+.App-link:hover,
+.App-link:focus {
+  color: #21a1f1; /* Color de enlace en estado hover o focus */
+  text-decoration: underline; /* Subrayado cuando el enlace se activa */
+}
+
+/* Animación de rotación del logo */
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Comienza sin rotación */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Completa la rotación */
   }
 }
